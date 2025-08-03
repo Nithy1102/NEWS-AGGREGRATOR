@@ -1,0 +1,119 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f1f1f1;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background: #1f1f2e;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #00d8ff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+
+select#category {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #888;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
+  pointer-events: auto;
+  z-index: 9999;
+}
+
+
+select:hover {
+  background: #444457;
+}
+
+/* Main container */
+#news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  gap: 25px;
+}
+
+/* News article card */
+.article {
+  background: #ffffff;
+  color: #222;
+  border-radius: 12px;
+  width: 320px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.article:hover {
+  transform: scale(1.03) rotateY(2deg);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.article img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.article h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.article p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.article a {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #00c6ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.article a:hover {
+  background-color: #008cba;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .article {
+    width: 90%;
+  }
+}
